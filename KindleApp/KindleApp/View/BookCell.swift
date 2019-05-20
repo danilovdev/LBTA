@@ -13,9 +13,27 @@ class BookCell: UITableViewCell {
     
     var book: Book? {
         didSet {
-            coverImageView.image = book?.image
             titleLabel.text = book?.title
             authorLabel.text = book?.author
+            
+            guard let coverImageUrl = book?.coverImageUrl,
+                let url = URL(string: coverImageUrl) else { return }
+            
+            coverImageView.image = nil
+            
+            URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+                if let error = error {
+                    print("Failed to retrieve our book cover image", error)
+                    return
+                }
+                
+                guard let data = data else { return }
+                
+                let image = UIImage(data: data)
+                DispatchQueue.main.async {
+                    self?.coverImageView.image = image
+                }
+            }.resume()
         }
     }
     
@@ -27,13 +45,16 @@ class BookCell: UITableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .white
         label.text = "This is the text for the title of our book inside of our cell"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
     
     private let authorLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .lightGray
         label.text = "This is some author for the book that we have in this row"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -50,7 +71,8 @@ class BookCell: UITableViewCell {
     }
     
     func setupUI() {
-        backgroundColor = .yellow
+        
+        backgroundColor = .clear
         
         addSubview(coverImageView)
         coverImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true

@@ -9,26 +9,26 @@
 /* Begin PBXBuildFile section */
 		3C12A0BA22918BD0006525A3 /* BookPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C12A0B922918BD0006525A3 /* BookPagerController.swift */; };
 		3C12A0BC229192F4006525A3 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C12A0BB229192F4006525A3 /* PageCell.swift */; };
+		3C12A0C22292C3EB006525A3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C12A0C12292C3EB006525A3 /* Book.swift */; };
 		3C6210C0228FE84F00948D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6210BF228FE84F00948D39 /* AppDelegate.swift */; };
-		3C6210C2228FE84F00948D39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6210C1228FE84F00948D39 /* ViewController.swift */; };
-		3C6210C5228FE84F00948D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6210C3228FE84F00948D39 /* Main.storyboard */; };
+		3C6210C2228FE84F00948D39 /* BookListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6210C1228FE84F00948D39 /* BookListController.swift */; };
 		3C6210C7228FE84F00948D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6210C6228FE84F00948D39 /* Assets.xcassets */; };
 		3C6210CA228FE84F00948D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6210C8228FE84F00948D39 /* LaunchScreen.storyboard */; };
-		3C6210D2228FF2F600948D39 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6210D1228FF2F600948D39 /* Models.swift */; };
+		3C6210D2228FF2F600948D39 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6210D1228FF2F600948D39 /* Page.swift */; };
 		3C6210D4228FFA3C00948D39 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6210D3228FFA3C00948D39 /* BookCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C12A0B922918BD0006525A3 /* BookPagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPagerController.swift; sourceTree = "<group>"; };
 		3C12A0BB229192F4006525A3 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		3C12A0C12292C3EB006525A3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		3C6210BC228FE84F00948D39 /* KindleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KindleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6210BF228FE84F00948D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C6210C1228FE84F00948D39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3C6210C4228FE84F00948D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C6210C1228FE84F00948D39 /* BookListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListController.swift; sourceTree = "<group>"; };
 		3C6210C6228FE84F00948D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C6210C9228FE84F00948D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C6210CB228FE84F00948D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C6210D1228FF2F600948D39 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		3C6210D1228FF2F600948D39 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		3C6210D3228FFA3C00948D39 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +43,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C12A0BD2292C3A5006525A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C6210D1228FF2F600948D39 /* Page.swift */,
+				3C12A0C12292C3EB006525A3 /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3C12A0BE2292C3AE006525A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C6210C1228FE84F00948D39 /* BookListController.swift */,
+				3C12A0B922918BD0006525A3 /* BookPagerController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3C12A0BF2292C3BC006525A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C6210D3228FFA3C00948D39 /* BookCell.swift */,
+				3C12A0BB229192F4006525A3 /* PageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3C12A0C02292C3C5006525A3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3C6210BF228FE84F00948D39 /* AppDelegate.swift */,
+				3C6210C6228FE84F00948D39 /* Assets.xcassets */,
+				3C6210C8228FE84F00948D39 /* LaunchScreen.storyboard */,
+				3C6210CB228FE84F00948D39 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		3C6210B3228FE84F00948D39 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +100,10 @@
 		3C6210BE228FE84F00948D39 /* KindleApp */ = {
 			isa = PBXGroup;
 			children = (
-				3C6210BF228FE84F00948D39 /* AppDelegate.swift */,
-				3C6210C1228FE84F00948D39 /* ViewController.swift */,
-				3C6210C3228FE84F00948D39 /* Main.storyboard */,
-				3C6210C6228FE84F00948D39 /* Assets.xcassets */,
-				3C6210C8228FE84F00948D39 /* LaunchScreen.storyboard */,
-				3C6210CB228FE84F00948D39 /* Info.plist */,
-				3C6210D1228FF2F600948D39 /* Models.swift */,
-				3C6210D3228FFA3C00948D39 /* BookCell.swift */,
-				3C12A0B922918BD0006525A3 /* BookPagerController.swift */,
-				3C12A0BB229192F4006525A3 /* PageCell.swift */,
+				3C12A0BE2292C3AE006525A3 /* Controller */,
+				3C12A0C02292C3C5006525A3 /* SupportingFiles */,
+				3C12A0BD2292C3A5006525A3 /* Model */,
+				3C12A0BF2292C3BC006525A3 /* View */,
 			);
 			path = KindleApp;
 			sourceTree = "<group>";
@@ -136,7 +168,6 @@
 			files = (
 				3C6210CA228FE84F00948D39 /* LaunchScreen.storyboard in Resources */,
 				3C6210C7228FE84F00948D39 /* Assets.xcassets in Resources */,
-				3C6210C5228FE84F00948D39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,9 +180,10 @@
 			files = (
 				3C6210D4228FFA3C00948D39 /* BookCell.swift in Sources */,
 				3C12A0BA22918BD0006525A3 /* BookPagerController.swift in Sources */,
+				3C12A0C22292C3EB006525A3 /* Book.swift in Sources */,
 				3C12A0BC229192F4006525A3 /* PageCell.swift in Sources */,
-				3C6210D2228FF2F600948D39 /* Models.swift in Sources */,
-				3C6210C2228FE84F00948D39 /* ViewController.swift in Sources */,
+				3C6210D2228FF2F600948D39 /* Page.swift in Sources */,
+				3C6210C2228FE84F00948D39 /* BookListController.swift in Sources */,
 				3C6210C0228FE84F00948D39 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3C6210C3228FE84F00948D39 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C6210C4228FE84F00948D39 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3C6210C8228FE84F00948D39 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9F5S24X43;
-				INFOPLIST_FILE = KindleApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KindleApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9F5S24X43;
-				INFOPLIST_FILE = KindleApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KindleApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

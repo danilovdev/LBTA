@@ -8,6 +8,13 @@
 
 import UIKit
 
+class CustomNavigationController: UINavigationController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let viewController = ViewController()
-        let navController = UINavigationController(rootViewController: viewController)
+        let viewController = BookListController(style: .grouped)
+        let navController = CustomNavigationController(rootViewController: viewController)
         window?.rootViewController = navController
         
         return true
