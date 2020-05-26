@@ -12,6 +12,8 @@ class AppSearchController: UICollectionViewController {
     
     private let cellId = "CellId"
     
+    private var appResults = [Result]()
+    
     init() {
         let collectionViewLayout = UICollectionViewFlowLayout()
         super.init(collectionViewLayout: collectionViewLayout)
@@ -22,6 +24,8 @@ class AppSearchController: UICollectionViewController {
         
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
+        
+        fetchItunesApps()
     }
     
     required init?(coder: NSCoder) {
@@ -32,7 +36,7 @@ class AppSearchController: UICollectionViewController {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 5
+        return appResults.count
     }
     
     override func collectionView(
@@ -40,7 +44,29 @@ class AppSearchController: UICollectionViewController {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchResultCell
+        
+        let appResult = appResults[indexPath.item]
+        cell.nameLabel.text = appResult.trackName
+        cell.categoryLabel.text = appResult.primaryGenreName
+        cell.ratingsLabel.text = "Rating: \(appResult.averageUserRating ?? 0)"
+        
         return cell
+    }
+    
+    
+    
+    private func fetchItunesApps() {
+        Service.shared.fetchResults { [weak self] results, error in
+            if let error = error {
+                print("Failed to fetch apps: ", error)
+                return
+            }
+            
+            self?.appResults = results
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
     }
 }
 

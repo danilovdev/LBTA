@@ -11,7 +11,7 @@ import UIKit
 class SearchResultCell: UICollectionViewCell {
     
     // MARK: - UI Components
-    private lazy var appIconImageView: UIImageView = {
+     lazy var appIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .red
         imageView.layer.cornerRadius = 12
@@ -20,19 +20,19 @@ class SearchResultCell: UICollectionViewCell {
         return imageView
     }()
     
-    private lazy var nameLabel: UILabel = {
+    lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.text = "APP NAME"
         return label
     }()
     
-    private lazy var categoryLabel: UILabel = {
+    lazy var categoryLabel: UILabel = {
         let label = UILabel()
         label.text = "Photos & Videos"
         return label
     }()
     
-    private lazy var ratingsLabel: UILabel = {
+    lazy var ratingsLabel: UILabel = {
         let label = UILabel()
         label.text = "9.26M"
         return label

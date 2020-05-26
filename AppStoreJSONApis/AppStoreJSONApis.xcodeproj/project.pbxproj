@@ -12,6 +12,8 @@
 		892C56D524503C25000F3485 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892C56D424503C25000F3485 /* BaseTabBarController.swift */; };
 		892C56D724503CE8000F3485 /* AppSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892C56D624503CE8000F3485 /* AppSearchController.swift */; };
 		892C56D92450413E000F3485 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892C56D82450413E000F3485 /* SearchResultCell.swift */; };
+		8953DA7B24543F7D00667B48 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8953DA7A24543F7D00667B48 /* SearchResult.swift */; };
+		8953DA7E2454482100667B48 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8953DA7D2454482100667B48 /* Service.swift */; };
 		89E83844245039220032D27B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E83843245039220032D27B /* AppDelegate.swift */; };
 		89E83846245039220032D27B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E83845245039220032D27B /* SceneDelegate.swift */; };
 		89E8384D245039230032D27B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E8384C245039230032D27B /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		892C56D424503C25000F3485 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		892C56D624503CE8000F3485 /* AppSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchController.swift; sourceTree = "<group>"; };
 		892C56D82450413E000F3485 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		8953DA7A24543F7D00667B48 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		8953DA7D2454482100667B48 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		89E83840245039220032D27B /* AppStoreJSONApis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreJSONApis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E83843245039220032D27B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89E83845245039220032D27B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,22 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		8953DA7924543F6400667B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8953DA7A24543F7D00667B48 /* SearchResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8953DA7C2454481700667B48 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8953DA7D2454482100667B48 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		89E83837245039220032D27B = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +108,8 @@
 		89E83842245039220032D27B /* AppStoreJSONApis */ = {
 			isa = PBXGroup;
 			children = (
+				8953DA7C2454481700667B48 /* Service */,
+				8953DA7924543F6400667B48 /* Model */,
 				892C56CF2450395D000F3485 /* Helpers */,
 				892C56CE24503958000F3485 /* Controllers */,
 				892C56CD24503950000F3485 /* Views */,
@@ -172,8 +194,10 @@
 			files = (
 				892C56D92450413E000F3485 /* SearchResultCell.swift in Sources */,
 				892C56D12450397A000F3485 /* VerticalStackView.swift in Sources */,
+				8953DA7B24543F7D00667B48 /* SearchResult.swift in Sources */,
 				892C56D524503C25000F3485 /* BaseTabBarController.swift in Sources */,
 				89E83844245039220032D27B /* AppDelegate.swift in Sources */,
+				8953DA7E2454482100667B48 /* Service.swift in Sources */,
 				89E83846245039220032D27B /* SceneDelegate.swift in Sources */,
 				892C56D724503CE8000F3485 /* AppSearchController.swift in Sources */,
 				892C56D324503A3B000F3485 /* UIView+Layout.swift in Sources */,
